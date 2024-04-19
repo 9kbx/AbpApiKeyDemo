@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Cotur.Abp.ApiKeyAuthorization</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="8.1.1" />
+	  <ProjectReference Include="..\Cotur.Abp.ApiKeyAuthorization.Application.Contracts\Cotur.Abp.ApiKeyAuthorization.Application.Contracts.csproj" />
+	  <ProjectReference Include="..\Cotur.Abp.ApiKeyAuthorization.AspNetCore\Cotur.Abp.ApiKeyAuthorization.AspNetCore.csproj" />
+  </ItemGroup>
+
+</Project>
