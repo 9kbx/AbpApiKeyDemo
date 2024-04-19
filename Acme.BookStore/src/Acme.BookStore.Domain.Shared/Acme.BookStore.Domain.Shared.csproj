@@ -29,4 +29,8 @@
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\abp-api-key-authorization-main\src\Cotur.Abp.ApiKeyAuthorization.Domain.Shared\Cotur.Abp.ApiKeyAuthorization.Domain.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
 ﻿using Acme.BookStore.Localization;
+using Cotur.Abp.ApiKeyAuthorization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.FeatureManagement;
@@ -16,6 +17,7 @@ using Volo.Abp.VirtualFileSystem;
 namespace Acme.BookStore;
 
 [DependsOn(
+    typeof(ApiKeyAuthorizationDomainSharedModule),
     typeof(AbpAuditLoggingDomainSharedModule),
     typeof(AbpBackgroundJobsDomainSharedModule),
     typeof(AbpFeatureManagementDomainSharedModule),

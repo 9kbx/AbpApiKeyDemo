@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\abp-api-key-authorization-main\src\Cotur.Abp.ApiKeyAuthorization.HttpApi\Cotur.Abp.ApiKeyAuthorization.HttpApi.csproj" />
     <ProjectReference Include="..\Acme.BookStore.Application.Contracts\Acme.BookStore.Application.Contracts.csproj" />
   </ItemGroup>
 

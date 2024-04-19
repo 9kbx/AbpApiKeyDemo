@@ -12,10 +12,12 @@ using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using Cotur.Abp.ApiKeyAuthorization.EntityFrameworkCore;
 
 namespace Acme.BookStore.EntityFrameworkCore;
 
 [DependsOn(
+    typeof(ApiKeyAuthorizationEntityFrameworkCoreModule),
     typeof(BookStoreDomainModule),
     typeof(AbpIdentityEntityFrameworkCoreModule),
     typeof(AbpOpenIddictEntityFrameworkCoreModule),

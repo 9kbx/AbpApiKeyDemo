@@ -14,10 +14,12 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.OpenIddict;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using Cotur.Abp.ApiKeyAuthorization;
 
 namespace Acme.BookStore;
 
 [DependsOn(
+    typeof(ApiKeyAuthorizationDomainModule),
     typeof(BookStoreDomainSharedModule),
     typeof(AbpAuditLoggingDomainModule),
     typeof(AbpBackgroundJobsDomainModule),

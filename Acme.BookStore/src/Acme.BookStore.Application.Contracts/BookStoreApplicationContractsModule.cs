@@ -1,4 +1,5 @@
-﻿using Volo.Abp.Account;
+﻿using Cotur.Abp.ApiKeyAuthorization;
+using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
@@ -10,6 +11,7 @@ using Volo.Abp.TenantManagement;
 namespace Acme.BookStore;
 
 [DependsOn(
+    typeof(ApiKeyAuthorizationApplicationContractsModule),
     typeof(BookStoreDomainSharedModule),
     typeof(AbpAccountApplicationContractsModule),
     typeof(AbpFeatureManagementApplicationContractsModule),

@@ -30,6 +30,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Security.Claims;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
+using Cotur.Abp.ApiKeyAuthorization.Http.ApiKeys;
 
 namespace Acme.BookStore;
 
@@ -190,6 +191,8 @@ public class BookStoreHttpApiHostModule : AbpModule
         app.UseRouting();
         app.UseCors();
         app.UseAuthentication();
+
+        app.UseApiKeyAuthorization();
 
         if (MultiTenancyConsts.IsEnabled)
         {

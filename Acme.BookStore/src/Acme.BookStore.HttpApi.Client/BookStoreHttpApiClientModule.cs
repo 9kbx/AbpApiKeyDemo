@@ -7,10 +7,12 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.VirtualFileSystem;
+using Cotur.Abp.ApiKeyAuthorization;
 
 namespace Acme.BookStore;
 
 [DependsOn(
+    typeof(ApiKeyAuthorizationHttpApiClientModule),
     typeof(BookStoreApplicationContractsModule),
     typeof(AbpAccountHttpApiClientModule),
     typeof(AbpIdentityHttpApiClientModule),

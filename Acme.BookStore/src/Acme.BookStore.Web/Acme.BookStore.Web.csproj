@@ -40,6 +40,7 @@
     <PackageReference Include="Volo.Abp.Identity.Web" Version="8.1.1" />
     <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="8.1.1" />
     <PackageReference Include="Volo.Abp.SettingManagement.Web" Version="8.1.1" />
+    <ProjectReference Include="..\..\..\abp-api-key-authorization-main\src\Cotur.Abp.ApiKeyAuthorization.Web\Cotur.Abp.ApiKeyAuthorization.Web.csproj" />
     <ProjectReference Include="..\Acme.BookStore.HttpApi.Client\Acme.BookStore.HttpApi.Client.csproj" />
     <ProjectReference Include="..\Acme.BookStore.HttpApi\Acme.BookStore.HttpApi.csproj" />
   </ItemGroup>

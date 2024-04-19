@@ -46,10 +46,12 @@ using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Cotur.Abp.ApiKeyAuthorization.Web;
 
 namespace Acme.BookStore.Web;
 
 [DependsOn(
+    typeof(ApiKeyAuthorizationWebModule),
     typeof(BookStoreHttpApiClientModule),
     typeof(BookStoreHttpApiModule),
     typeof(AbpAspNetCoreAuthenticationOpenIdConnectModule),
