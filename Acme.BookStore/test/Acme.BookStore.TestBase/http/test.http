@@ -1,0 +1,9 @@
+﻿
+GET https://localhost:44318/api/identity/users?x-apikey=myapikey123
+
+###
+
+GET https://localhost:44318/api/identity/users
+x-apikey: myapikey123
+
+###
