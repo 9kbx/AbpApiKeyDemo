@@ -5,6 +5,7 @@ using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.EntityFrameworkCore;
@@ -25,6 +26,8 @@ public class BookStoreDbContext :
     ITenantManagementDbContext
 {
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
+
+    public DbSet<MyBook> MyBooks { get; set; }
 
     #region Entities from the modules
 
@@ -85,5 +88,14 @@ public class BookStoreDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+
+        builder.Entity<MyBook>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "MyBooks", BookStoreConsts.DbSchema);
+            b.ToTable(t => t.HasComment("My Books"));
+            b.Property(x => x.Name).HasComment("Book Name");
+
+            b.ConfigureByConvention(); //auto configure for the base class props
+        });
     }
 }
